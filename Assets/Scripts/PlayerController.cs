@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     
     public TMP_Text countText;
     public TMP_Text winText;
+    public GameObject nextLevelButton;
 
     
     public float speed = 10.0f;
@@ -32,7 +33,10 @@ public class PlayerController : MonoBehaviour
         winText.gameObject.SetActive(false);
 
         if (endPanel != null )
-            endPanel.SetActive(false);   // Al igual que el winText, nos aseguramos de que el panel final esté oculto desde el principio
+            endPanel.SetActive(false);    // Al igual que el winText, nos aseguramos de que el panel final esté oculto desde el principio
+
+        if (nextLevelButton != null )
+            nextLevelButton.SetActive(false);
     }
 
     private void OnMove(InputValue movementValue)
@@ -64,6 +68,27 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics.Raycast(transform.position, Vector3.down, rayDistance, groundMask);
     }
 
+    void LateUpdate()
+    {
+        // Si la bola cae fuera del escenario (por ejemplo, por debajo de Y = -2)
+        if (transform.position.y < -2f)
+        {
+
+            // Mostrar el panel de fin de partida
+            if (endPanel != null)
+            {
+                endPanel.SetActive(true);
+            }
+
+            // Opcional: detener el movimiento de la bola
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+
+            // Bloquear el control (para que no siga moviéndose)
+            this.enabled = false;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PickUp"))
@@ -81,9 +106,20 @@ public class PlayerController : MonoBehaviour
         {
             winText.gameObject.SetActive(true);
 
+
             if(endPanel != null)
                 endPanel.SetActive(true);   // Al llegar a la puntuación máxima se visibiliza el endPanel
+
+            if (nextLevelButton != null)
+                nextLevelButton.SetActive(true);  // Activamos el botón de Next Level solo si se llega a la puntuación indicada
         }
+    }
+
+    public void NextLevel()
+    {
+       
+        SceneManager.LoadScene("Level02");
+
     }
 
     public void RestardGame()
