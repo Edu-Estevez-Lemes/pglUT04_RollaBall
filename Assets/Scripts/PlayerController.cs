@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("UI")]
+    
     public TMP_Text countText;
     public TMP_Text winText;
 
-    [Header("Movimiento")]
+    
     public float speed = 10.0f;
     public float jumpForce = 5.0f;         // fuerza del salto
     public LayerMask groundMask;           // capa del suelo
@@ -21,12 +22,17 @@ public class PlayerController : MonoBehaviour
     private float movementY;
     private bool isGrounded = false;
 
+    public GameObject endPanel;           // Referencia al panel final con lo botones
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
         winText.gameObject.SetActive(false);
+
+        if (endPanel != null )
+            endPanel.SetActive(false);   // Al igual que el winText, nos aseguramos de que el panel final esté oculto desde el principio
     }
 
     private void OnMove(InputValue movementValue)
@@ -74,6 +80,28 @@ public class PlayerController : MonoBehaviour
         if (count >= 12)
         {
             winText.gameObject.SetActive(true);
+
+            if(endPanel != null)
+                endPanel.SetActive(true);   // Al llegar a la puntuación máxima se visibiliza el endPanel
         }
     }
+
+    public void RestardGame()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+
+    public void ExitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // Para el editor
+#else
+        Application.Quit(); // Para el build final
+#endif
+
+    }
+
+
+
 }
