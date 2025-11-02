@@ -8,6 +8,13 @@ Incluye un menú principal, música ambiental, detección de colisiones, puntuac
 
 ---
 
+<h1>NOTA IMPORTANTE</h1>
+
+El proyecto se ha realizado con *UNITY* en su **versión 6.0 (6000.0.61f1)**
+Es necesario descargarse esta versión para poder ejecutar el proyecto de manera correcta.
+
+
+
 ## 🚀 Comenzando
 
 Estas instrucciones te permitirán obtener una copia del proyecto para pruebas o evaluación académica.
@@ -67,33 +74,40 @@ Pulsa Play o genera el Build del juego.
 | 🕹️ Menú principal	             |        Escena inicial con botón “**Start Game**”  |
 
 ## 🧩 Scripts principales
-**Script**	                                **Función**
-PlayerController.cs	                        Control del jugador, movimiento, salto, puntuación y UI
-MusicManager.cs	                            Control del audio ambiental persistente
-MainMenu.cs	                                Gestión del menú inicial y carga de Level01
-CameraController.cs	                        Seguimiento de la cámara al objeto Player
+| **Script**	                 |               **Función** |
+|--------------------------------|------------------------------------------------------------------------|
+|PlayerController.cs	         |               Control del jugador, movimiento, salto, puntuación y UI  |
+|MusicManager.cs	             |               Control del audio ambiental persistente  |
+|MainMenu.cs	                 |               Gestión del menú inicial y carga de Level01  |
+|CameraController.cs	         |               Seguimiento de la cámara al objeto Player  |
 
 ## 🎵 Audio
 
 - Carpeta: `/Assets/Audio/soundtrack.mp3`
 - Configuración: Reproducción automática con Play On Awake habilitado.
 
+## 🎨🧱 Texturas
+
+En el **Level 2** he añadido texturas al escenario. En la carpeta *Materials* se encuentra un directorio con archivos `jpg` con las texturas.
+El **Level 1** se ve como en los tutoriales y así ver la diferencia entre ambos escenarios.
+
 ## 🧪 Pruebas realizadas
-**Prueba**	                **Resultado esperado**
-- Recoger cubos	            Incrementa el contador y desactiva el cubo
-- Saltar	                    La bola se eleva con espacio y cae correctamente
-- Caer fuera del mapa	        Se activa el EndPanel con Restart/Exit
-- Botón Next Level	        Carga correctamente Level02
-- Restart	                    Reinicia la escena actual
-- Exit	                    Cierra el juego o detiene el modo Play (en el editor)
+| **Prueba**	          |      **Resultado esperado**  |
+|-------------------------|------------------------------|
+| Recoger cubos	          |      Incrementa el contador y desactiva el cubo  |
+| Saltar	              |      La bola se eleva con espacio y cae correctamente  |
+| Caer fuera del mapa	  |      Se activa el EndPanel con Restart/Exit  |
+| Botón Next Level	      |      Carga correctamente Level02  |
+| Restart	              |      Reinicia la escena actual  |
+| Exit	                  |      Cierra el juego o detiene el modo Play (en el editor)  |
 
-##✒️ Autor
-Eduardo Estévez Lemes
-🎓 Estudiante de Desarrollo de Aplicaciones Multiplataforma (3º DAM)
-📘 Módulo: Programación de Lenguajes Gráficos (PLG)
-💻 Motor: Unity 6.0 – Lenguaje C#
+## ✒️ Autor
+**Eduardo Estévez Lemes**
+- 🎓 Estudiante de Desarrollo de Aplicaciones Multiplataforma (3º DAM)
+- 📘 Módulo: PLG 
+- 💻 Motor: Unity 6.0 – Lenguaje C#
 
-📜 Licencia
+## 📜 Licencia
 
 Proyecto académico con fines educativos dentro del módulo Programación de Lenguajes Gráficos (PLG).
 Uso libre para aprendizaje y prácticas personales en Unity.
