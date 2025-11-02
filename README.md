@@ -22,7 +22,7 @@ Estas instrucciones te permitirán obtener una copia del proyecto para pruebas o
 ### 📁 Estructura del proyecto
 El proyecto consta de las siguientes escenas principales:
 
-1. **MainMenu** → Menú principal con botón “Start Game”.
+1. **IntroPanel** → Menú principal con botón “Start Game”.
 2. **Level01** → Nivel base (tutorial extendido Roll-a-Ball).
 3. **Level02** → Segundo nivel con plataformas y dificultad avanzada.
 
@@ -65,7 +65,7 @@ Espera a que se importen los assets y dependencias.
 
 ### 3️⃣ Ejecutar el juego
 
-Escena inicial: MainMenu
+Escena inicial: IntroPanel
 (Debe estar en la primera posición en “File → Build Settings → Scenes In Build”)
 
 Pulsa Play o genera el Build del juego.
@@ -99,8 +99,8 @@ Pulsa Play o genera el Build del juego.
 
 ## 🎨🧱 Texturas
 
-En el **Level 2** he añadido texturas al escenario. En la carpeta *Materials* se encuentra un directorio con archivos `jpg` con las texturas.
-El **Level 1** se ve como en los tutoriales y así ver la diferencia entre ambos escenarios.
+- En el **Level 2** he añadido texturas al escenario. En la carpeta *Materials* se encuentra un directorio con archivos `jpg` con las texturas.
+- El **Level 1** se ve como en los tutoriales y así ver la diferencia entre ambos escenarios.
 
 ## 🧪 Pruebas realizadas
 | **Prueba**	          |      **Resultado esperado**  |
@@ -115,7 +115,7 @@ El **Level 1** se ve como en los tutoriales y así ver la diferencia entre ambos
 ## ✒️ Autor
 **Eduardo Estévez Lemes**
 - 🎓 Estudiante de Desarrollo de Aplicaciones Multiplataforma (3º DAM)
-- 📘 Módulo: PLG 
+- 📘 Módulo: PGL 
 - 💻 Motor: Unity 6.0 – Lenguaje C#
 
 ## 📜 Licencia
