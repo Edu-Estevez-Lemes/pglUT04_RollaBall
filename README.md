@@ -38,6 +38,17 @@ Antes de comenzar, asegúrate de tener instalado:
 
 ---
 
+## ⚙️ Tecnologías utilizadas
+
+- **Unity 6.0** – Motor de desarrollo 3D
+- **C# (Visual Studio)** – Programación del comportamiento del jugador y la lógica del juego
+- **TextMeshPro (TMP)** – Interfaz de usuario y marcador de puntuación
+- **Input System** – Control de movimiento y salto
+- **SceneManager API** – Cambio de escenas y niveles
+- **Audio Source** – Reproducción de música ambiental
+- **GitHub** – Control de versiones y entrega del proyecto
+
+
 ## 🔧 Instalación
 
 ### 1️⃣ Clonar el repositorio
