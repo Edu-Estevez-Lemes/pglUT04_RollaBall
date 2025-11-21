@@ -112,6 +112,18 @@ Pulsa Play o genera el Build del juego.
 | Restart	              |      Reinicia la escena actual  |
 | Exit	                  |      Cierra el juego o detiene el modo Play (en el editor)  |
 
+## 🔥VR EJEMPLO
+
+Dentro de la carpeta Scenes, hay una escena llamada **Level01VR**.
+Una esacena desarrollada como prueba VR.
+### Los paquetes descargados han sido:
+
+- XR Interaction Toolkit y samples Starter Assets y XR Device Simulator
+- XR Plugin Management
+- OpenXR Plugin
+
+Podemos arrastrar la bola por el tablero para que atrape los PickUps.
+
 ## ✒️ Autor
 **Eduardo Estévez Lemes**
 - 🎓 Estudiante de Desarrollo de Aplicaciones Multiplataforma (3º DAM)
